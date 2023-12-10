@@ -1,8 +1,4 @@
-# Authentication & Authorization | Part 4
+# Proptelligence
 
-- Integrating APIs
-  - Get Exclusive Prime Deals
-- API Call Possible Views
-  - Handle Success View
-  - Handle Failure View
-  - Handle Loading View
+World's Leading Property Technology Startup
+Unlock the power of property intelligence with Proptelligence! Our innovative technologies are designed to help you get the most out of your real estate investments. Get the insights you need to make smarter decisions - with Proptelligence, the future of property is at your fingertips!
