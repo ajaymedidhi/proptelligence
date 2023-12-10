@@ -8,20 +8,21 @@ const Home = () => (
     <Header />
     <div className="home-container">
       <div className="home-content">
-        <h1 className="home-heading">
-          Welcome to Proptelligence! Your Gateway to Revolutionary Proptech
-          Solutions!
-        </h1>
+        <h1 className="home-heading">WELCOME</h1>
+        <h2 className="sub-heading">
+          World's Leading Property Technology Startup
+        </h2>
         <img
           src="https://img.freepik.com/premium-photo/house-growth-chart-real-estate-market-concept-generative-ai_609002-980.jpg"
           alt="clothes to be noticed"
           className="home-mobile-img"
         />
         <p className="home-description">
-          At Proptelligence, we spearhead a Proptech revolution by harnessing
-          the potential of Synthetic Data, propelling the Real Estate and Legal
-          industries into the future using cutting-edge, disruptive
-          technologies.
+          Unlock the power of property intelligence with Proptelligence! Our
+          innovative technologies are designed to help you get the most out of
+          your real estate investments. Get the insights you need to make
+          smarter decisions - with Proptelligence, the future of property is at
+          your fingertips!
         </p>
       </div>
       <img
@@ -46,13 +47,13 @@ const Home = () => (
           <p>Efficient Solutions for Real Estate Management</p>
         </div>
         <div className="service-item">
-          <Link to="/legal">
+          <a href="https://ntadvocates.in">
             <img
               src="https://img.freepik.com/premium-photo/consultation-male-lawyer-business-woman-customer_28283-887.jpg"
               alt="Service 2"
               className="service-image"
             />
-          </Link>
+          </a>
           <h3>Legal Services</h3>
           <p>Expert Legal Guidance for Seamless Real Estate Transactions</p>
         </div>

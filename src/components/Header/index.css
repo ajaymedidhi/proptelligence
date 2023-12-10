@@ -1,6 +1,7 @@
 .nav-header {
   display: flex;
   justify-content: center;
+  background-color: #f2f997;
   border-bottom: 1px solid rgb(243, 243, 243);
 }
 .heading {
@@ -24,11 +25,11 @@
   width: 90%;
   max-width: 1110px;
   padding-top: 25px;
-  padding-bottom: 25px;
+  padding-bottom: 20px;
 }
 
 .website-logo {
-  width: 110px;
+  width: 150px;
 }
 
 @media screen and (min-width: 768px) {

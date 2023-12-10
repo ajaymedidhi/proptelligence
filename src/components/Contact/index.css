@@ -1,0 +1,89 @@
+.contact-us-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+  width: 80%;
+}
+
+.contact-info {
+  width: 40%;
+}
+
+.contact-info h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  margin-bottom: 15px;
+}
+
+.contact-details p {
+  margin-bottom: 5px;
+}
+
+.contact-form {
+  width: 25%;
+  margin-left: 20px;
+}
+
+.contact-form h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+input[type='text'],
+input[type='email'],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.cont1 {
+  background-color: #02797f;
+  height: 100vh;
+  padding: 20px;
+}
+
+.social-media-buttons {
+  margin-top: 20px;
+}
+
+.social-media-buttons a {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+/* Style your social media icons */
+.social-media-buttons img {
+  width: 60px; /* Adjust the width as needed */
+  height: auto;
+}

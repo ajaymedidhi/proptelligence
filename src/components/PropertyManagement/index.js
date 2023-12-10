@@ -1,24 +1,83 @@
-const PropertyManagement = () => (
-  <div className="property-management-services">
-    <h2>Property Management Services</h2>
-    <p>
-      We specialize in offering comprehensive property management solutions
-      tailored to meet your needs. Our key services revolve around facilitating
-      seamless property transactions, focusing on both buying and selling.
-    </p>
-    <div className="key-services">
-      <h3>Key Services:</h3>
-      <ul>
-        <li>
-          Buy: Explore a diverse range of properties available for purchase.
-        </li>
-        <li>
-          Sell: List your properties for sale and reach potential buyers
-          efficiently.
-        </li>
-      </ul>
-    </div>
-  </div>
-)
+import {useState} from 'react'
 
-export default PropertyManagement
+import {Link, withRouter} from 'react-router-dom'
+import {FaShoppingCart, FaHandshake, FaHome} from 'react-icons/fa'
+
+import './index.css'
+
+const PropertyManagement = () => {
+  const [selectedCity, setSelectedCity] = useState('')
+  const [selectedOption, setSelectedOption] = useState('')
+
+  const handleCityChange = e => {
+    setSelectedCity(e.target.value)
+  }
+
+  const handleOptionChange = option => {
+    setSelectedOption(option)
+  }
+  const cities = [
+    'Mumbai',
+    'Delhi',
+    'Bangalore',
+    'Hyderabad',
+    'Kolkata',
+    'Chennai',
+    'Pune',
+    'Ahmedabad',
+  ]
+  return (
+    <>
+      <div className="property-management-services">
+        <div className="header">
+          <h2 className="pms-heading">Property Management Services</h2>
+          <button>Post Property</button>
+        </div>
+        <div>
+          <ul
+            style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              listStyle: 'none',
+              padding: 0,
+            }}
+          >
+            {cities.map(city => (
+              <li key={city} style={{margin: '5px'}}>
+                <Link
+                  to="/prop"
+                  style={{textDecoration: 'none', color: 'blue'}}
+                >
+                  {city}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="service-container">
+          <div className="service">
+            <h3>
+              <FaShoppingCart /> Buy
+            </h3>
+            <ul>
+              <li>Property Valuation</li>
+            </ul>
+          </div>
+          <div className="service">
+            <h3>
+              <FaHandshake /> Sell
+            </h3>
+          </div>
+          <div className="service">
+            <h3>
+              <FaHome /> Rent
+            </h3>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
+
+export default withRouter(PropertyManagement)

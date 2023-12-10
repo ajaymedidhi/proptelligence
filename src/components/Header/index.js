@@ -2,16 +2,9 @@ import React, {useState} from 'react'
 
 import {Link, withRouter} from 'react-router-dom'
 
-import Cookies from 'js-cookie'
-
 import './index.css'
 
 const Header = props => {
-  const onClickLogout = () => {
-    Cookies.remove('jwt_token')
-    const {history} = props
-    history.replace('/login')
-  }
   const [showServicesPopup, setShowServicesPopup] = useState(false)
 
   const toggleServicesPopup = () => {
@@ -30,7 +23,14 @@ const Header = props => {
   return (
     <nav className="nav-header">
       <div className="nav-content">
-        <h1 className="heading">Proptellegince</h1>
+        <Link to="/">
+          <img
+            className="website-logo"
+            src="https://res.cloudinary.com/ajaymedidhi7/image/upload/v1702144766/097ggh_s7g2pi.png"
+            alt="website logo"
+          />
+        </Link>
+
         <ul className="nav-menu">
           <li>
             <Link
@@ -46,15 +46,24 @@ const Header = props => {
               About us
             </Link>
           </li>
-          <li>
-            <Link to="/about" className="nav-link">
-              Industries
-            </Link>
-          </li>
-          <li>
-            <Link to="/about" className="nav-link">
-              Technologies
-            </Link>
+          <li
+            className="link-item"
+            onMouseEnter={toggleServicesPopup}
+            onMouseLeave={closeServicesPopup}
+          >
+            <span className="nav-link">Solutions</span>
+            {showServicesPopup && (
+              <div className="services-popup">
+                <ul className="services-list">
+                  <Link to="/prop">
+                    <li className="nav-link1">Industries</li>
+                  </Link>
+                  <Link to="/technology">
+                    <li className="nav-link1"> Technologies</li>
+                  </Link>
+                </ul>
+              </div>
+            )}
           </li>
           <li
             className="link-item"
@@ -68,16 +77,16 @@ const Header = props => {
                   <Link to="/prop">
                     <li>Property Management Services</li>
                   </Link>
-                  <Link to="/legal">
+                  <a href="https://ntadvocates.in">
                     <li>Legal Services</li>
-                  </Link>
+                  </a>
                 </ul>
               </div>
             )}
           </li>
 
           <li>
-            <Link to="/cart" className="nav-link">
+            <Link to="/contact" className="nav-link">
               Contact
             </Link>
           </li>
@@ -91,7 +100,7 @@ const Header = props => {
           <Link to="/">
             <li className="nav-menu-item-mobile">
               <img
-                src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-home-icon.png"
+                src="https://res.cloudinary.com/ajaymedidhi7/image/upload/v1702144766/097ggh_s7g2pi.png"
                 alt="nav home"
                 className="nav-bar-image"
               />
